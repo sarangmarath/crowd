@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* MAIN */
+.main {
+    margin-left: 240px;
+    padding: 40px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    flex: 1;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.15);
+}
+
+/* DROP AREA */
+.drop-area {
+    border: 2px dashed rgba(255,255,255,0.4);
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.drop-area.dragging {
+    background: rgba(255,255,255,0.1);
+}
+
+/* LOADER */
+.loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.spinner {
+    border: 6px solid rgba(255,255,255,0.2);
+    border-top: 6px solid #00f2ff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}

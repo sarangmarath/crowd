@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Video</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="main">
+
+    <h1>📂 Upload Video</h1>
+
+    <!-- 🔥 Drag Drop Area -->
+    <div id="dropArea" class="drop-area">
+        <p>Drag & Drop Video Here</p>
+        <p>OR</p>
+        <input type="file" name="video" id="fileInput" onchange="previewVideo(this)" hidden>
+        <button onclick="document.getElementById('fileInput').click()">Choose File</button>
+    </div>
+
+    <!-- 🎥 Preview -->
+    <video id="videoPreview" controls style="display:none; width:500px; margin-top:20px;"></video>
+
+    <!-- 📤 Upload Form -->
+    <form action="/upload" method="post" enctype="multipart/form-data" onsubmit="return handleUpload(this)">
+        <input type="file" name="video" id="hiddenInput" hidden>
+        <button type="submit">🚀 Analyze Video</button>
+    </form>
+
+    <br>
+    <a href="/">⬅ Back</a>
+
+</div>
+
+<!-- 🔥 LOADER -->
+<div id="loader" class="loader">
+    <div class="spinner"></div>
+    <p>Processing Video...</p>
+</div>
+
+<script src="/static/script.js"></script>
+
+<script>
+// sync file input
+document.getElementById("fileInput").addEventListener("change", function(){
+    document.getElementById("hiddenInput").files = this.files;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crowd AI Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>🚨 Crowd AI</h2>
+    <ul>
+        <li onclick="goPage('/')">Dashboard</li>
+        <li onclick="goPage('/upload_page')">Upload Video</li>
+        <li onclick="goPage('/webcam')">Live Webcam</li>
+        <li onclick="goPage('/iot')">IoT Panel</li>
+    </ul>
+</div>
+
+<div class="main">
+
+    <h1>Smart Crowd Monitoring</h1>
+
+    <div class="cards">
+
+        <div class="card" onclick="goPage('/upload_page')">
+            <h2>📂 Upload Video</h2>
+            <p>Analyze crowd & detect stampede risk</p>
+        </div>
+
+        <div class="card" onclick="goPage('/webcam')">
+            <h2>🎥 Live Camera</h2>
+            <p>Real-time detection using webcam</p>
+        </div>
+
+        <div class="card" onclick="goPage('/iot')">
+            <h2>📡 IoT Integration</h2>
+            <p>Connect Arduino & alerts</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function goPage(route){
+    window.location.href = route;
+}
+</script>
+
+</body>
+</html>

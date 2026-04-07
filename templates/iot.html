@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IoT Panel</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🔌 IoT Integration Panel</h1>
+
+    <div class="card">
+        <h3>Status: <span class="status">Not Connected</span></h3>
+        <button onclick="connectIoT()">Connect Arduino</button>
+    </div>
+
+    <div class="card">
+        <h3>🚨 Emergency Alert</h3>
+        <button onclick="triggerAlert()">Trigger Buzzer</button>
+    </div>
+
+    <a href="/" class="back-btn">⬅ Back</a>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

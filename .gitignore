@@ -1,0 +1,41 @@
+# Environments
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# YOLO and Model Artifacts
+runs/
+yolov8n.pt
+*.pt
+!best.pt
+
+# Datasets and Data Generation
+ShanghaiTech_Crowd_Counting_Dataset/
+datasets/
+
+# Logs
+error_log.txt
+*.log
+
+# Keep small test videos, ignore generated big ones if needed
+# (Optional) ignore newly generated outputs
+out.mp4
+.ipynb_checkpoints/
+*.pyc
+__pycache__/
+*.mp4
+*.avi
+*.jpg
+*.png
+datasets/
+UMN/
+WEB/
+umn_abnormal_model.h5/
+*.h5

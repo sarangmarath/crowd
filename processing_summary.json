@@ -1,0 +1,13 @@
+{
+  "total_frames": 341,
+  "total_detections": 9885,
+  "avg_density": 0.9241446725317692,
+  "avg_speed": 0.05749524321986351,
+  "avg_abnormality": 0.5127612223373481,
+  "max_risk": 0.5852686295571821,
+  "risk_distribution": {
+    "safe": 0,
+    "warning": 341,
+    "critical": 0
+  }
+}
